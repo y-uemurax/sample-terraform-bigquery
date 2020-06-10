@@ -1,0 +1,35 @@
+substitutions:
+  _TERRAFORM_VERSION: 0.12.20
+steps:
+- id: 'tf init'
+  name: 'hashicorp/terraform:${_TERRAFORM_VERSION}'
+  entrypoint: 'sh'
+  args: 
+  - '-c'
+  - 'terraform init'
+
+# [START tf-plan]
+- id: 'tf plan'
+  name: 'hashicorp/terraform:${_TERRAFORM_VERSION}'
+  entrypoint: 'sh'
+  args: 
+  - '-c'
+  - 'terraform plan -var project_id=$$PROJECT_ID'
+# [END tf-plan]
+
+# [START tf-apply]
+- id: 'tf apply'
+  name: 'hashicorp/terraform:${_TERRAFORM_VERSION}'
+  entrypoint: 'sh'
+  args: 
+  - '-c'
+  - 'terraform apply -var project_id=$$PROJECT_ID -auto-approve'
+  secretEnv:
+  - 'PROJECT_ID'
+
+# [END tf-apply] 
+
+secrets:
+  - kmsKeyName: projects/y-uemura/locations/asia-northeast1/keyRings/sample-terraform-bigquery/cryptoKeys/project-id
+    secretEnv:
+      PROJECT_ID: CiQA7POl2+Urz8B9jKengHoENJJcTCjXkRC/tb/zm2STmeurY8USOwAvfQ2LjA0CMN3L8ER/WSTwTNhY9J7rLUObxEDCJnRDsMEKqkowZwMQPHWjbuxizRk6GXw0uOCh3orC

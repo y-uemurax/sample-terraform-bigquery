@@ -1,0 +1,102 @@
+[
+  {
+    "type": "STRING",
+    "name": "id",
+    "mode": "NULLABLE"
+  },
+  {
+    "type": "STRING",
+    "name": "first_name",
+    "mode": "NULLABLE"
+  },
+  {
+    "type": "STRING",
+    "name": "last_name",
+    "mode": "NULLABLE"
+  },
+  {
+    "type": "DATE",
+    "name": "dob",
+    "mode": "NULLABLE"
+  },
+  {
+    "fields": [
+      {
+        "type": "STRING",
+        "name": "status",
+        "mode": "NULLABLE"
+      },
+      {
+        "type": "STRING",
+        "name": "address",
+        "mode": "NULLABLE"
+      },
+      {
+        "type": "STRING",
+        "name": "city",
+        "mode": "NULLABLE"
+      },
+      {
+        "type": "STRING",
+        "name": "state",
+        "mode": "NULLABLE"
+      },
+      {
+        "type": "STRING",
+        "name": "zip",
+        "mode": "NULLABLE"
+      },
+      {
+        "type": "STRING",
+        "name": "numberOfYears",
+        "mode": "NULLABLE"
+      }
+    ],
+    "type": "RECORD",
+    "name": "addresses",
+    "mode": "REPEATED"
+  },
+  {
+    "fields": [
+      {
+        "type": "STRING",
+        "name": "status",
+        "mode": "NULLABLE"
+      },
+      {
+        "type": "STRING",
+        "name": "address",
+        "mode": "NULLABLE"
+      },
+      {
+        "type": "STRING",
+        "name": "city",
+        "mode": "NULLABLE"
+      },
+      {
+        "type": "STRING",
+        "name": "state",
+        "mode": "NULLABLE"
+      },
+      {
+        "type": "STRING",
+        "name": "zip",
+        "mode": "NULLABLE"
+      },
+      {
+        "type": "STRING",
+        "name": "numberOfYears",
+        "mode": "NULLABLE"
+      }
+    ],
+    "type": "RECORD",
+    "name": "addresses2",
+    "mode": "NULLABLE"
+  },
+  {
+    "type": "STRING",
+    "name": "hoge",
+    "mode": "REPEATED"
+  }
+]
+
